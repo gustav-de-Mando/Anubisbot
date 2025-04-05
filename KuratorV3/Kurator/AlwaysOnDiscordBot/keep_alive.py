@@ -10,5 +10,5 @@ def index():
 def run():
   app.run(host='0.0.0.0',port=8000)
 def keep_alive():  
-    t = Thread(target=run, deamon=True)
+    t = Thread(target=run)
     t.start()
