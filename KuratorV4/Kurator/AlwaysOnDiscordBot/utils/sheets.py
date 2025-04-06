@@ -158,6 +158,23 @@ def log_ausbau_to_sheet(spreadsheet_id, land, ausbau_art, level, kosten, gebiet,
     
     # Formatiere für militärische Einheiten
     is_military = ausbau_art in militaerische_einheiten
+     # Berechne Rekruten/Seemänner
+    rekruten = 0
+    seemanner = 0
+    if is_military:
+        if ausbau_art == "Infanterie":
+            rekruten = 4 * anzahl
+        elif ausbau_art == "Kavallerie":
+            rekruten = 3 * anzahl
+        elif ausbau_art == "Artillerie":
+            rekruten = 2 * anzahl
+        elif ausbau_art == "Korvette":
+            seemanner = 2 * anzahl
+        elif ausbau_art == "Fregatte":
+            seemanner = 3 * anzahl
+        elif ausbau_art == "Linienschiff":
+            seemanner = 5 * anzahl
+            
     # Bei militärischen Einheiten wird die Anzahl in der Ausbauart angezeigt
     ausbau_str = f"{ausbau_art} (x{anzahl})" if is_military else ausbau_art
     
@@ -173,7 +190,9 @@ def log_ausbau_to_sheet(spreadsheet_id, land, ausbau_art, level, kosten, gebiet,
         eisen,                  # Eisen
         stoff,                  # Stoff
         nahrung,                # Nahrung
-        gold                    # Gold
+        gold,                   # Gold
+        rekruten,              # Rekruten
+        seemanner              # Seemänner    
     ]]
     
     # Trage die Daten in das Sheet ein
