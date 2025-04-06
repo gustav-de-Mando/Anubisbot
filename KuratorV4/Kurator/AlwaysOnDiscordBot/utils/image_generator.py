@@ -179,40 +179,7 @@ Vertragsbruchklausel:
             draw.text((70, y_position), line, font=main_font, fill=(0, 0, 0))
             y_position += line_height
 
-    # Platz für Unterschriften
-    sig_y = 700 #moved down
 
-    # Linke Unterschrift
-    sig_line_length = 300
-    left_sig_x = 100
-    draw.line([(left_sig_x, sig_y), (left_sig_x + sig_line_length, sig_y)], fill=(0, 0, 0), width=1)
-
-    signature_left = f"{initiator_name}"
-    draw.text((left_sig_x + sig_line_length // 2 - draw.textlength(signature_left, font=signature_font) // 2, 
-              sig_y - 30), signature_left, font=signature_font, fill=(0, 0, 0))
-
-    initiator_title = f"Herrscher von {initiator_country}"
-    draw.text((left_sig_x + sig_line_length // 2 - draw.textlength(initiator_title, font=signature_font) // 2, 
-              sig_y + 10), initiator_title, font=signature_font, fill=(0, 0, 0))
-
-    # Rechte Unterschrift
-    right_sig_x = width - 100 - sig_line_length
-    draw.line([(right_sig_x, sig_y), (right_sig_x + sig_line_length, sig_y)], fill=(0, 0, 0), width=1)
-
-    signature_right = f"{partner_name}"
-    draw.text((right_sig_x + sig_line_length // 2 - draw.textlength(signature_right, font=signature_font) // 2, 
-              sig_y - 30), signature_right, font=signature_font, fill=(0, 0, 0))
-
-    partner_title = f"Herrscher von {partner_country}"
-    draw.text((right_sig_x + sig_line_length // 2 - draw.textlength(partner_title, font=signature_font) // 2, 
-              sig_y + 10), partner_title, font=signature_font, fill=(0, 0, 0))
-
-    # Einfaches rundes Siegel in der Mitte
-    seal_position = (width // 2, sig_y)
-    seal_radius = 30
-    draw.ellipse((seal_position[0] - seal_radius, seal_position[1] - seal_radius, 
-                 seal_position[0] + seal_radius, seal_position[1] + seal_radius), 
-                 outline=(139, 0, 0), width=2)
 
     # Speichere das Bild in einem BytesIO-Objekt
     img_byte_arr = BytesIO()
