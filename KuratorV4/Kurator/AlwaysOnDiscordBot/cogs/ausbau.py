@@ -95,10 +95,10 @@ ausbau_kosten = {
         5: {"holz": 300, "stein": 750, "eisen": 300, "stoff": 75, "nahrung": 250, "gold": 16000000}
     },
     "Expansion_Holz": {
-        1: {"holz": 5, "stein": 0, "eisen": 0, "stoff": 0, "nahrung": 10, "gold": 150000}
+        1: {"holz": 5, "stein": 0, "eisen": 0, "stoff": 2, "nahrung": 5, "gold": 150000}
     },
     "Expansion_Stein": {
-        1: {"holz": 0, "stein": 10, "eisen": 0, "stoff": 0, "nahrung": 10, "gold": 150000}
+        1: {"holz": 0, "stein": 10, "eisen": 0, "stoff": 2, "nahrung": 5, "gold": 150000}
     },
     "Infanterie": {
         1: {"holz": 0, "stein": 0, "eisen": 20, "stoff": 20, "nahrung": 30, "gold": 250000}
