@@ -142,28 +142,28 @@ class Ausbau(commands.Cog):
         ausbau_art=[
             app_commands.Choice(name="Expansion (Holz)", value="Expansion_Holz"),
             app_commands.Choice(name="Expansion (Stein)", value="Expansion_Stein"),
+            app_commands.Choice(name="Wirtschaft", value="Wirtschaft"),
+            app_commands.Choice(name="Bevölkerung", value="Bevölkerung"),
+            app_commands.Choice(name="Bergbau", value="Bergbau"),
+            app_commands.Choice(name="Agrabau", value="Agrabau"),
+            app_commands.Choice(name="Nebenstadt", value="Nebenstadt"),
+            app_commands.Choice(name="Handelsposten", value="Handelsposten"),
+            app_commands.Choice(name="Hauptstadt", value="Hauptstadt"),
+            app_commands.Choice(name="Handelszentrum", value="Handelszentrum"),
+            app_commands.Choice(name="Festung", value="Festung"),
+            app_commands.Choice(name="Infanterie", value="Infanterie"),
+            app_commands.Choice(name="Kavallerie", value="Kavallerie"),
+            app_commands.Choice(name="Artillerie", value="Artillerie"),
+            app_commands.Choice(name="Korvette", value="Korvette"),
+            app_commands.Choice(name="Fregatte", value="Fregatte"),
+            app_commands.Choice(name="Linienschiff", value="Linienschiff")
+            
         ],
         personal_art=[
             app_commands.Choice(name="Rekrut", value="rekrut"),
             app_commands.Choice(name="Seemann", value="seemann")
         ]
     )
-        app_commands.Choice(name="Wirtschaft", value="Wirtschaft"),
-        app_commands.Choice(name="Bevölkerung", value="Bevölkerung"),
-        app_commands.Choice(name="Bergbau", value="Bergbau"),
-        app_commands.Choice(name="Agrabau", value="Agrabau"),
-        app_commands.Choice(name="Nebenstadt", value="Nebenstadt"),
-        app_commands.Choice(name="Handelsposten", value="Handelsposten"),
-        app_commands.Choice(name="Hauptstadt", value="Hauptstadt"),
-        app_commands.Choice(name="Handelszentrum", value="Handelszentrum"),
-        app_commands.Choice(name="Festung", value="Festung"),
-        app_commands.Choice(name="Infanterie", value="Infanterie"),
-        app_commands.Choice(name="Kavallerie", value="Kavallerie"),
-        app_commands.Choice(name="Artillerie", value="Artillerie"),
-        app_commands.Choice(name="Korvette", value="Korvette"),
-        app_commands.Choice(name="Fregatte", value="Fregatte"),
-        app_commands.Choice(name="Linienschiff", value="Linienschiff")
-    ])
     async def ausbau(
         self,
         interaction: discord.Interaction,
