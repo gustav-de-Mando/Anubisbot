@@ -1,0 +1,28 @@
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:28,905 - discord_bot - ERROR - Fehler im Ausbau-Command: cannot schedule new futures after shutdown
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:29,083 - discord_bot - ERROR - Fehler im Ausbau-Command: 404 Not Found (error code: 10062): Unknown interaction
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,384 - discord_bot - ERROR - Fehler beim Eintragen in die Tabelle 'Ausbau': ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2025-04-05 21:10:30,760 - discord_bot - ERROR - Auch Fallback-Methode fehlgeschlagen: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
