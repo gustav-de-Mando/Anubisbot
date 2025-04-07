@@ -227,32 +227,28 @@ class Ausbau(commands.Cog):
                         ephemeral=True
                     )
                     return
-            
             # Berechne die Kosten
             base_kosten = ausbau_kosten[ausbau_art.value][level]
             
             # Check if it's an expansion building
             is_expansion = ausbau_art.value in expansion_buildings
             
-            if is_military or is_expansion:
-                # Multipliziere die Kosten mit der Anzahl der Einheiten
-                if anzahl <= 0:
-                    await interaction.response.send_message(
-                        f"Die Anzahl muss größer als 0 sein.",
-                        ephemeral=True
-                    )
-                    return
-                kosten = {k: v * anzahl for k, v in base_kosten.items()}
-            else:
-                kosten = base_kosten
+            # Multipliziere die Kosten mit der Anzahl der Einheiten
+            if anzahl <= 0:
+                await interaction.response.send_message(
+                    f"Die Anzahl muss größer als 0 sein.",
+                    ephemeral=True
+                )
+                return
+            kosten = {k: v * anzahl for k, v in base_kosten.items()}
             
             # Erstelle die Bestätigungsnachricht
             kosten_str = "\n".join([
                 f"- {k.capitalize()}: {v:,}".replace(",", ".") for k, v in kosten.items() if v > 0
             ])
             
-            # Formatiere die Anzahl nur für militärische Einheiten
-            anzahl_str = f" (Anzahl: {anzahl})" if is_military else ""
+            # Formatiere die Anzahl für alle Einheiten
+            anzahl_str = f" (Anzahl: {anzahl})"
             
             embed = discord.Embed(
                 title=f"🏗️ Ausbau: {ausbau_art.value} Stufe {level}{anzahl_str}",
