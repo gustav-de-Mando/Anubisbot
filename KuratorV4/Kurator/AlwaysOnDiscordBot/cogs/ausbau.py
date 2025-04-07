@@ -154,13 +154,13 @@ class Ausbau(commands.Cog):
         app_commands.Choice(name="Fregatte", value="Fregatte"),
         app_commands.Choice(name="Linienschiff", value="Linienschiff")
     ])
-    async def ausbau(
+async def ausbau(
         self,
         interaction: discord.Interaction,
         ausbau_art: app_commands.Choice[str],
         level: int,
         gebiet: int,
-        anzahl: int = 1
+        anzahl: int = 1  # Default value for anzahl is 1
     ):
         """
         Führe einen Ausbau in deinem Land durch.
@@ -170,7 +170,7 @@ class Ausbau(commands.Cog):
         ausbau_art: Die Art des Ausbaus (Wirtschaft, Militär, etc.)
         level: Die Ausbaustufe (1-7)
         gebiet: Die Gebietsnummer, in der der Ausbau stattfinden soll
-        anzahl: Die Anzahl der Einheiten (nur bei militärischen Einheiten relevant)
+        anzahl: Die Anzahl der Einheiten oder Ausbaustufen (Default: 1)
         """
         try:
             # Prüfe Länderzugehörigkeit
@@ -183,11 +183,8 @@ class Ausbau(commands.Cog):
                 )
                 return
             
-            # Prüfe, ob es sich um eine militärische Einheit handelt
-            is_military = ausbau_art.value in militaerische_einheiten
-            
             # Prüfe Levelbereich und Gebiet für militärische Einheiten
-            if is_military:
+            if ausbau_art.value in militaerische_einheiten:
                 # Bei militärischen Einheiten muss das Level 1 sein
                 if level != 1:
                     await interaction.response.send_message(
@@ -203,11 +200,6 @@ class Ausbau(commands.Cog):
                         ephemeral=True
                     )
                     return
-                    await interaction.response.send_message(
-                        f"Für militärische Einheiten muss das Level 1 sein.",
-                        ephemeral=True
-                    )
-                    return
             else:
                 # Prüfe, ob die Ausbaustufe für diesen Ausbautyp verfügbar ist
                 if level not in ausbau_kosten[ausbau_art.value]:
@@ -219,21 +211,11 @@ class Ausbau(commands.Cog):
                         ephemeral=True
                     )
                     return
-
-                # Bei nicht-militärischen Einheiten muss die Anzahl 1 sein
-                if anzahl != 1:
-                    await interaction.response.send_message(
-                        f"Für Infrastruktur-Ausbauten muss die Anzahl 1 sein.",
-                        ephemeral=True
-                    )
-                    return
+            
             # Berechne die Kosten
             base_kosten = ausbau_kosten[ausbau_art.value][level]
             
-            # Check if it's an expansion building
-            is_expansion = ausbau_art.value in expansion_buildings
-            
-            # Multipliziere die Kosten mit der Anzahl der Einheiten
+            # Multipliziere die Kosten mit der Anzahl der Einheiten oder Ausbaustufen
             if anzahl <= 0:
                 await interaction.response.send_message(
                     f"Die Anzahl muss größer als 0 sein.",
@@ -247,8 +229,9 @@ class Ausbau(commands.Cog):
                 f"- {k.capitalize()}: {v:,}".replace(",", ".") for k, v in kosten.items() if v > 0
             ])
             
-            # Formatiere die Anzahl für alle Einheiten
+            # Formatiere die Anzahl für alle Einheiten und Ausbaustufen
             anzahl_str = f" (Anzahl: {anzahl})"
+
             
             embed = discord.Embed(
                 title=f"🏗️ Ausbau: {ausbau_art.value} Stufe {level}{anzahl_str}",
