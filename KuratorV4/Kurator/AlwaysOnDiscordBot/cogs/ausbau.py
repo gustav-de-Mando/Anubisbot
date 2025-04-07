@@ -154,7 +154,7 @@ class Ausbau(commands.Cog):
         app_commands.Choice(name="Fregatte", value="Fregatte"),
         app_commands.Choice(name="Linienschiff", value="Linienschiff")
     ])
-async def ausbau(
+    async def ausbau(
         self,
         interaction: discord.Interaction,
         ausbau_art: app_commands.Choice[str],
