@@ -130,6 +130,7 @@ expansion_buildings = ["Expansion_Holz", "Expansion_Stein"]
 class Ausbau(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        logger.info("Ausbau cog initialized")
 
     @app_commands.command(
         name="ausbau",
@@ -188,6 +189,7 @@ class Ausbau(commands.Cog):
         try:
             # Prüfe Länderzugehörigkeit
             user_country = next((role for role in interaction.user.roles if role.name != "@everyone"), None)
+            logger.info(f"user_country: {user_country}")
 
             if not user_country:
                 await interaction.response.send_message(
