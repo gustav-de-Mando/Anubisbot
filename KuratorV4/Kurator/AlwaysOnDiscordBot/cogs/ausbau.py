@@ -183,6 +183,8 @@ class Ausbau(commands.Cog):
         gebiet: Die Gebietsnummer, in der der Ausbau stattfinden soll
         anzahl: Die Anzahl der Einheiten (nur bei militärischen Einheiten relevant)
         """
+
+        logger.info("Received /ausbau command")
         try:
             # Prüfe Länderzugehörigkeit
             user_country = next((role for role in interaction.user.roles if role.name != "@everyone"), None)
@@ -196,6 +198,7 @@ class Ausbau(commands.Cog):
             
             # Prüfe, ob es sich um eine militärische Einheit handelt
             is_military = ausbau_art.value in militaerische_einheiten
+            logger.info(f"is_military: {is_military}")
             
             # Prüfe Levelbereich und Gebiet für militärische Einheiten
             if is_military:
@@ -241,9 +244,11 @@ class Ausbau(commands.Cog):
             
             # Berechne die Kosten
             base_kosten = ausbau_kosten[ausbau_art.value][level]
+            logger.info(f"base_kosten: {base_kosten}")
             
             # Check if it's an expansion building
             is_expansion = ausbau_art.value in expansion_buildings
+            logger.info(f"is_expansion: {is_expansion}")
             
             if is_military or is_expansion:
                 # Multipliziere die Kosten mit der Anzahl der Einheiten
