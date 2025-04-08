@@ -173,6 +173,20 @@ class Ausbau(commands.Cog):
         anzahl: int = 1,
         personal_art: app_commands.Choice[str] = None
     ):
+        logger.info("Received /ausbau command")
+    try:
+        # Existing logic...
+        logger.info(f"User {interaction.user.name} is performing {ausbau_art.value} at level {level} in area {gebiet} with quantity {anzahl}")
+        
+        # More logging as needed...
+
+    except Exception as e:
+        logger.error(f"Fehler im Ausbau-Command: {str(e)}")
+        await interaction.response.send_message(
+            "Ein Fehler ist aufgetreten. Bitte versuche es später erneut.",
+            ephemeral=True
+        )
+        
         """
         Führe einen Ausbau in deinem Land durch.
         
