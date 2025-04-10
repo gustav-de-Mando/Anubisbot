@@ -237,7 +237,7 @@ class Ausbau(commands.Cog):
                     return
 
                 # Bei nicht-militärischen Einheiten muss die Anzahl 1 sein
-                if anzahl <= 1:
+                if anzahl <= 0:
                     await interaction.response.send_message(
                         f"Für Infrastruktur-Ausbauten muss die Anzahl 1 sein oder höher.",
                         ephemeral=True
